@@ -1,0 +1,84 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("test", "DarkTheme")
+
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+
+	MainSection:NewButton("Remove UI", "Just test", function()
+		game.Players.LocalPlayer.PlayerGui.AppUI.Enabled = false
+		game.Players.LocalPlayer.PlayerGui.HotbarGui.Enabled = false
+		game.Players.LocalPlayer.PlayerGui.LevelGui2.Enabled = false
+	end)
+
+	
+	MainSection:NewButton("Show UI", "Just test", function()
+		game.Players.LocalPlayer.PlayerGui.AppUI.Enabled = true
+		game.Players.LocalPlayer.PlayerGui.HotbarGui.Enabled = true
+		game.Players.LocalPlayer.PlayerGui.LevelGui2.Enabled = true
+    end)
+
+    MainSection:NewButton("Infinite Yield", "FE Admin Commands", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end)
+
+
+    --LOCAL PLAYER
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+
+
+    PlayerSection:NewButton("free cam", "OP", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Roblox/Core-Scripts/master/CoreScriptsRoot/Modules/Server/FreeCamera/FreeCamera.lua'),true))()
+    end)
+ 
+
+    --Other
+    local Other = Window:NewTab("Other")
+    local OtherSection = Other:NewSection("Other")
+
+    OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+    end)
+
+    OtherSection:NewButton("Bypassed Fly", "bird mode", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
+
+        Fly(true)
+    end)
+ 
+    
+         --Theme
+    local Other = Window:NewTab("Gui Theme")
+    local OtherSection = Other:NewSection("Gui Theme")
+    
+	OtherSection:NewButton("Light Mode", "Light.", function()
+		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/sniftyboi/Light-Mode/main/Light%20Theme"))()
+		local Window = Library.CreateLib("test", "LightTheme")
+	end)
+
+	OtherSection:NewButton("Dark Mode", "Dark.", function()
+		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/sniftyboi/Yes/main/Dark%20Mode"))()
+		local Window = Library.CreateLib("test", "DarkTheme")
+	end)
+
+	OtherSection:NewButton("Purple Mode", "Purpleeeee.", function()
+		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/sniftyboi/Purple-Mode/main/Purple%20Mode"))()
+		local Window = Library.CreateLib("test", "GrapeTheme")
+	end)
+
+    OtherSection:NewButton("Red and Black Mode", "Yes it's so ugly.", function()
+		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/sniftyboi/Blood/main/Blood"))()
+		local Window = Library.CreateLib("test", "BloodTheme")
+	end)
+
+	OtherSection:NewButton("Ocean Mode", "E.", function()
+		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/sniftyboi/Ocean/main/Ocean"))()
+		local Window = Library.CreateLib("test", "Ocean")
+	end)
+
+	OtherSection:NewButton("Red and Black but different Mode", "Light.", function()
+		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/sniftyboi/Midnight/main/Midnight"))()
+		local Window = Library.CreateLib("test", "Midnight")
+	end)
